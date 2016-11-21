@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Graf demo</title>
+    <script src="scripts/graf.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <canvas id="graf"></canvas>
+    <script>
+      var style = {
+        table_lwidth : 0.1,
+        point_hover : true,
+      }
+      var graf = Graf.initialize("graf", {chartType : "cartesian"}, {}, style);
+      graf.draw(["-1", "-2", "-3", "1", "2", "3"], ["100", "200", "300", "-100", "-200", "-300"]);
+      graf.graphEquation(graf.quadratic, [1, 20], {a: 2, b: 3, c: 4})
+    </script>
+  </body>
+</html>
